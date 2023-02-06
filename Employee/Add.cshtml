@@ -1,0 +1,41 @@
+﻿@model EmployeeLib.DataClasses.Employee
+@{
+    ViewBag.Title = "Index";
+    var options = new AjaxOptions
+    {
+        InsertionMode = InsertionMode.Replace,
+        UpdateTargetId = "divArea"
+    };
+}
+<h2>Add</h2>
+@using (Html.BeginForm())
+{<div>
+        Employee Id: @Html.EditorFor(m => m.EmpId, new { @class = "form-control" })
+    </div>
+    <div>
+        Employee Name: @Html.EditorFor(m => m.EmpName, new { @class = "form-control" })
+
+    </div>
+    <div>
+        Employee Address: @Html.EditorFor(m => m.EmpAddress, new { @class = "form-control" })
+
+    </div>
+    <div>
+        Employee Salary: @Html.EditorFor(m => m.EmpSalary, new { @class = "form-control" })
+
+    </div>
+    <div>
+        Dept Id : @Html.EditorFor(m => m.DeptId, new { @class = "form-control" })
+
+    </div>
+    <div>
+        <button type="submit" class="btn btn-success">Modify Changes</button>
+    </div>
+
+
+
+
+
+
+}
+
